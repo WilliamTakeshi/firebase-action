@@ -14,6 +14,7 @@ RUN apt update && apt-get install --no-install-recommends -y jq openjdk-11-jre &
 
 RUN npm i -g npm@8.10.0 && npm cache clean --force;
 RUN npm i -g firebase-tools@12.4.0 && npm cache clean --force;
+RUN npm i -g esy && npm cache clean --force;
 
 COPY LICENSE README.md /
 COPY "entrypoint.sh" "/entrypoint.sh"
